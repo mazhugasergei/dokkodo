@@ -1,0 +1,372 @@
+import { cn } from "@/utils"
+
+// Simple function to render Japanese text with proper line breaks
+const renderJapaneseText = (text: string | string[]) => {
+	if (Array.isArray(text)) {
+		return text.map((line, i) => (
+			<div key={i} className="mb-2">
+				<p className="text-lg" dangerouslySetInnerHTML={{ __html: line }} />
+			</div>
+		))
+	}
+	return <span dangerouslySetInnerHTML={{ __html: text }} />
+}
+
+const locales = ["jp", "en", "zh", "ru"] as const
+const data = {
+	title: {
+		oldJapanese: "獨行道",
+		modernJapanese: "独行道",
+		en: "The Way of Walking Alone",
+		zh: "独行道",
+		ru: "Путь одиночки",
+	},
+	author: {
+		jp: "宮本 武蔵",
+		en: "Miyamoto Musashi",
+		zh: "宫本武藏",
+		ru: "Миямото Мусаси",
+		year: 1645,
+	},
+	verses: [
+		{
+			jp: "一　<ruby>世々<rt>よよ</rt></ruby>の<ruby>道<rt>みち</rt></ruby>をそむく<ruby>事<rt>こと</rt></ruby>なし",
+			en: "I will not oppose the ways of the world.",
+			zh: "我不会违背世间之道。",
+			ru: "Я не буду противиться миру.",
+			explanation: {
+				jp: "世々を通じて存在する自然の秩序と普遍的な原理に自分を合わせよ。現実の根本的な真理に逆らったり、背を向けたりしてはならない。時空を包含する道を受け入れることで、エゴや無知によって対立するのではなく、世界と調和を保つことができる。",
+				en: "Align yourself with the natural order and universal principles that have existed across all generations. Do not resist or turn away from the fundamental truths of reality. By accepting the Way that encompasses all time and space, you remain in harmony with the world rather than opposing it through ego or ignorance.",
+				zh: "使自己与世代相传的自然秩序和普遍原则保持一致。不要抵抗或背离现实的根本真理。通过接受涵盖一切时空的道，你将与世界保持和谐，而不是因自我或无知而与之对抗。",
+				ru: "Приведи себя в соответствие с естественным порядком и универсальными принципами, существующими во всех поколениях. Не сопротивляйся и не отворачивайся от фундаментальных истин реальности. Принимая Путь, охватывающий все время и пространство, ты остаешься в гармонии с миром, а не противостоишь ему через эго или невежество.",
+			},
+		},
+		{
+			jp: "一　<ruby>身<rt>み</rt></ruby>にたのしみをたくまず",
+			en: "I will not seek pleasurable activities.",
+			zh: "我不会追求享乐。",
+			ru: "Я не буду искать удовольствий.",
+			explanation: {
+				jp: "肉体的な快楽や一時的な娯楽を追い求めることは、武士の道から心を逸らせる。真の満足は自己修練と目的への献身から生まれる。欲望に溺れず、より高い目標に集中することで、精神的な強さと明晰さを保つことができる。",
+				en: "Do not pursue bodily pleasures or fleeting entertainment that distract from the warrior's path. True fulfillment comes from self-discipline and dedication to purpose. By avoiding indulgence in desires and focusing on higher goals, you maintain spiritual strength and mental clarity necessary for mastery.",
+				zh: "不要追求肉体享乐或短暂的娱乐，这些会使人偏离武士之道。真正的满足来自自律和对目标的奉献。通过避免沉溺于欲望，专注于更高的目标，你能保持精神力量和心智清明，这是掌握技艺所必需的。",
+				ru: "Не стремись к телесным удовольствиям или мимолетным развлечениям, отвлекающим от пути воина. Истинное удовлетворение приходит от самодисциплины и преданности цели. Избегая потакания желаниям и сосредоточиваясь на высших целях, ты сохраняешь духовную силу и ясность ума, необходимые для мастерства.",
+			},
+		},
+		{
+			jp: "一　よろずに<ruby>依恃<rt>えこ</rt></ruby>の<ruby>心<rt>こころ</rt></ruby>なし",
+			en: "I will give preference to nothing among all things.",
+			zh: "我对万事万物不存偏私之心。",
+			ru: "Я не буду ничему отдавать предпочтение.",
+			explanation: {
+				jp: "特定の物事や人に対する偏愛や執着を持たない。依怙贔屓は判断を曇らせ、公正さを失わせる。すべてを平等に見ることで、真実をありのままに認識し、状況に応じて適切な行動を取ることができる。偏見なき心こそが、武士の公平な判断力の源である。",
+				en: "Do not harbor favoritism or attachment to particular things or people. Bias clouds judgment and compromises fairness. By viewing all things equally, you perceive truth as it is and act appropriately according to circumstances. An impartial mind is the foundation of the warrior's sound judgment and just decisions.",
+				zh: "不要对特定的事物或人怀有偏爱或执着。偏见会蒙蔽判断，损害公正。通过平等地看待一切，你能如实认识真相，并根据情况采取适当的行动。无偏见之心是武士正确判断和公正决策的基础。",
+				ru: "Не питай пристрастия или привязанности к конкретным вещам или людям. Предвзятость затуманивает суждение и подрывает справедливость. Рассматривая все равно, ты воспринимаешь истину такой, какая она есть, и действуешь соответственно обстоятельствам. Беспристрастный ум — основа здравого суждения и справедливых решений воина.",
+			},
+		},
+		{
+			jp: "一　<ruby>身<rt>み</rt></ruby>をあさく思い<ruby>世<rt>よ</rt></ruby>をふかく思う",
+			en: "I consider myself unimportant, but the world so great and deep.",
+			zh: "我视己身为轻，而视世界为深重。",
+			ru: "Я считаю себя незначительным, но мир — великим и глубоким.",
+			explanation: {
+				jp: "自分個人の利益や名声を軽んじ、世界の深遠さと複雑さを重んじる。自己中心的な考えから離れ、より大きな視野を持つことで、真の知恵と謙虚さが生まれる。自分を小さく見ることは卑下ではなく、宇宙の広大さと人生の奥深さを認識することである。",
+				en: "Value your personal interests and fame lightly, while honoring the profundity and complexity of the world. By moving away from self-centered thinking and embracing a broader perspective, you cultivate true wisdom and humility. Viewing yourself as small is not self-deprecation, but recognition of the vastness of the universe and the depth of existence.",
+				zh: "轻视个人利益和名声，而尊重世界的深邃和复杂。摆脱以自我为中心的思维，拥抱更广阔的视野，从而培养真正的智慧和谦逊。把自己看得渺小不是自我贬低，而是认识到宇宙的浩瀚和生命的深奥。",
+				ru: "Цени легко свои личные интересы и славу, но почитай глубину и сложность мира. Отходя от эгоцентричного мышления и принимая более широкую перспективу, ты развиваешь истинную мудрость и смирение. Видеть себя малым — не самоуничижение, а признание необъятности вселенной и глубины бытия.",
+			},
+		},
+		{
+			jp: "一　<ruby>一生<rt>いっしょう</rt></ruby>の間よくしん思わず",
+			en: "I will be free of desire throughout my entire life.",
+			zh: "我终生不起贪欲之心。",
+			ru: "Я буду свободен от желаний всю свою жизнь.",
+			explanation: {
+				jp: "生涯を通じて貪欲や執着心を抱かない。物質的な欲望や名誉への渇望は心を乱し、本質から目を逸らせる。欲心を捨てることで、心は自由になり、真の目的に集中できる。これは禁欲ではなく、不必要な執着から解放され、清らかな心で生きることである。",
+				en: "Throughout your life, harbor no greed or attachment. Material desires and cravings for honor disturb the mind and divert attention from what is essential. By abandoning covetousness, the mind becomes free and can focus on true purpose. This is not asceticism, but liberation from unnecessary attachments, living with a pure heart.",
+				zh: "终生不怀贪婪或执着之心。物质欲望和对荣誉的渴求会扰乱心智，使人偏离本质。通过摒弃贪欲，心灵获得自由，能够专注于真正的目标。这不是禁欲主义，而是从不必要的执着中解脱，以纯净之心生活。",
+				ru: "На протяжении всей жизни не питай алчности или привязанности. Материальные желания и жажда почестей тревожат ум и отвлекают от сущностного. Отказываясь от корыстолюбия, ум обретает свободу и может сосредоточиться на истинной цели. Это не аскетизм, а освобождение от ненужных привязанностей, жизнь с чистым сердцем.",
+			},
+		},
+		{
+			jp: "一　<ruby>我事<rt>わがこと</rt></ruby>において<ruby>後悔<rt>こうかい</rt></ruby>をせず",
+			en: "I will not regret my deeds.",
+			zh: "我对自己的行为不感后悔。",
+			ru: "Я не буду сожалеть о своих поступках.",
+			explanation: {
+				jp: "自分の行動に対して後悔しない。決断を下す時は慎重に考え、行動したら振り返らない。後悔は過去に囚われ、前進を妨げる。過ちから学ぶことは重要だが、悔やむことに時間を費やすべきではない。全力を尽くして行動したなら、その結果を受け入れ、次へ進むべきである。",
+				en: "Do not regret your actions. When making decisions, think carefully; once you act, do not look back. Regret traps you in the past and hinders progress. Learning from mistakes is important, but dwelling in remorse wastes time. If you acted with full commitment, accept the outcome and move forward.",
+				zh: "不要为自己的行为后悔。做决定时要深思熟虑，一旦行动就不要回头。后悔会让你困于过去，阻碍前进。从错误中学习很重要，但沉溺于懊悔是浪费时间。如果你全力以赴地行动了，就接受结果并继续前行。",
+				ru: "Не сожалей о своих действиях. Принимая решения, думай тщательно; совершив поступок, не оглядывайся назад. Сожаление удерживает тебя в прошлом и препятствует прогрессу. Учиться на ошибках важно, но пребывание в раскаянии — трата времени. Если ты действовал с полной отдачей, прими результат и двигайся вперед.",
+			},
+		},
+		{
+			jp: "一　<ruby>善悪<rt>ぜんあく</rt></ruby>に他をねたむ<ruby>心<rt>こころ</rt></ruby>なし",
+			en: "I will not be envious of anybody, good or bad.",
+			zh: "我对任何人都不心怀嫉妒，无论善恶。",
+			ru: "Я не буду завидовать никому, ни хорошему, ни плохому.",
+			explanation: {
+				jp: "他人の成功や失敗に対して嫉妬心を抱かない。善人の美徳を羨まず、悪人の悪行にも嫉妬しない。嫉妬は心を蝕み、自己の成長を妨げる。他者と自分を比較するのではなく、自らの道を歩み、自己の向上に専念すべきである。他者の状況は自分の価値を決めるものではない。",
+				en: "Do not harbor envy toward others' success or failure. Do not covet the virtues of the good, nor be jealous of the misdeeds of the bad. Envy corrodes the heart and obstructs personal growth. Rather than comparing yourself to others, walk your own path and devote yourself to self-improvement. Others' circumstances do not determine your worth.",
+				zh: "不要对他人的成功或失败心怀嫉妒。不要羡慕善人的美德，也不要嫉妒恶人的恶行。嫉妒会侵蚀内心，阻碍个人成长。与其将自己与他人比较，不如走自己的路，专注于自我提升。他人的境况不决定你的价值。",
+				ru: "Не питай зависти к успеху или неудаче других. Не завидуй добродетелям добрых и не ревнуй к злодеяниям злых. Зависть разъедает сердце и препятствует личностному росту. Вместо того чтобы сравнивать себя с другими, иди своим путем и посвяти себя самосовершенствованию. Обстоятельства других не определяют твою ценность.",
+			},
+		},
+		{
+			jp: "一　いづれの<ruby>道<rt>みち</rt></ruby>にもわかれをかなしまず",
+			en: "I will not be sad when I must take my leave of any way.",
+			zh: "我不会为离开任何道路而悲伤。",
+			ru: "Я не буду печалиться, покидая любой путь.",
+			explanation: {
+				jp: "どのような道や関係から離れる時も、悲しみに囚われない。別れは自然な流れであり、執着は前進を妨げる。感謝と共に過去を手放し、新たな道へ進む心構えを持つ。変化を恐れず、すべての経験を成長の糧とする。",
+				en: "Do not be trapped in sorrow when leaving any path or relationship. Parting is a natural flow, and attachment hinders progress. Release the past with gratitude and maintain readiness to advance on a new path. Do not fear change, and treat all experiences as nourishment for growth.",
+				zh: "离开任何道路或关系时，不要被悲伤所困。离别是自然的流转，执着会阻碍前进。怀着感激放下过去，保持向新道路前行的心态。不要畏惧变化，将所有经历视为成长的养分。",
+				ru: "Не попадай в плен печали, покидая любой путь или отношения. Расставание — естественный поток, а привязанность препятствует прогрессу. Отпусти прошлое с благодарностью и сохраняй готовность двигаться по новому пути. Не бойся перемен и воспринимай весь опыт как пищу для роста.",
+			},
+		},
+		{
+			jp: "一　<ruby>自他共<rt>じたとも</rt></ruby>にうらみかこつ<ruby>心<rt>こころ</rt></ruby>なし",
+			en: "I will not seek excuses and will hold no grudge against myself or others.",
+			zh: "我不会寻找借口，也不会对自己或他人怀恨在心。",
+			ru: "Я не буду искать оправданий и не буду держать обиду на себя или других.",
+			explanation: {
+				jp: "自分や他人を恨まず、言い訳を求めない。失敗の責任を他者に転嫁せず、自らの行動を省みる。同時に、過度な自責も避ける。恨みや不満は心を曇らせ、建設的な行動を妨げる。責任を受け入れ、改善に集中すべきである。",
+				en: "Hold no resentment toward yourself or others, and seek no excuses. Do not shift blame for failure onto others; reflect on your own actions. At the same time, avoid excessive self-blame. Grudges and complaints cloud the mind and obstruct constructive action. Accept responsibility and focus on improvement.",
+				zh: "不要对自己或他人怀恨，也不要寻找借口。不要将失败的责任推给他人，要反思自己的行为。同时，也要避免过度自责。怨恨和抱怨会蒙蔽心智，阻碍建设性的行动。接受责任，专注于改进。",
+				ru: "Не питай обиды к себе или другим и не ищи оправданий. Не перекладывай вину за неудачи на других; размышляй о собственных действиях. В то же время избегай чрезмерного самобичевания. Обиды и жалобы затуманивают ум и препятствуют конструктивным действиям. Прими ответственность и сосредоточься на улучшении.",
+			},
+		},
+		{
+			jp: "一　れんぼの<ruby>道<rt>みち</rt></ruby>思いよる<ruby>心<rt>こころ</rt></ruby>なし",
+			en: "I will not indulge in the way of passionate love.",
+			zh: "我不会沉溺于情爱之道。",
+			ru: "Я не буду предаваться пути страстной любви.",
+			explanation: {
+				jp: "情熱的な恋愛に溺れない。激しい情念は判断を狂わせ、武士の道から心を逸らせる。これは愛情を否定するのではなく、感情に支配されることなく、冷静さと目的への献身を保つことを意味する。感情と理性のバランスを保つべきである。",
+				en: "Do not drown in passionate romance. Intense passion distorts judgment and diverts the heart from the warrior's way. This does not deny affection, but means maintaining composure and dedication to purpose without being controlled by emotions. Balance emotion and reason.",
+				zh: "不要沉溺于激情之恋。强烈的情欲会扭曲判断，使心偏离武士之道。这并非否定情感，而是指在不被情绪控制的情况下，保持冷静和对目标的专注。应保持情感与理性的平衡。",
+				ru: "Не тони в страстной романтике. Интенсивная страсть искажает суждение и отвлекает сердце от пути воина. Это не отрицает привязанность, но означает сохранение самообладания и преданности цели без контроля со стороны эмоций. Балансируй эмоции и разум.",
+			},
+		},
+		{
+			jp: "一　<ruby>物毎<rt>ものごと</rt></ruby>にすきこのむ<ruby>事<rt>こと</rt></ruby>なし",
+			en: "I will not seek elegance and beauty in all things.",
+			zh: "我不会在万物中追求优雅与美。",
+			ru: "Я не буду искать изящество и красоту во всем.",
+			explanation: {
+				jp: "あらゆる物事において風流や美を追求しない。審美的な嗜好に時間と心を奪われることは、本質から目を逸らせる。実用性と目的を優先し、表面的な美しさに惑わされない。ただし、これは美を否定するのではなく、それに執着しないことを意味する。",
+				en: "Do not pursue refinement and beauty in all things. Having time and mind consumed by aesthetic preferences diverts attention from the essential. Prioritize practicality and purpose, and do not be deceived by superficial beauty. However, this does not deny beauty, but means not being attached to it.",
+				zh: "不要在所有事物中追求风雅和美感。让时间和心智被审美偏好占据会使人偏离本质。优先考虑实用性和目的，不要被表面的美丽所迷惑。然而，这并非否定美，而是不执着于它。",
+				ru: "Не стремись к изысканности и красоте во всем. Когда время и ум поглощены эстетическими предпочтениями, внимание отвлекается от существенного. Отдавай приоритет практичности и цели, не обманывайся поверхностной красотой. Однако это не отрицает красоту, но означает непривязанность к ней.",
+			},
+		},
+		{
+			jp: "一　<ruby>私宅<rt>してき</rt></ruby>においてのぞむ<ruby>心<rt>こころ</rt></ruby>なし",
+			en: "I will have no luxury in my house.",
+			zh: "我在家中不追求奢华。",
+			ru: "В моем доме не будет роскоши.",
+			explanation: {
+				jp: "自宅において贅沢を求めない。豪華な住居や装飾品は心を物質に縛り付ける。質素な生活は精神の自由をもたらし、真に重要なことに集中できる。必要最小限で満足し、過剰な所有欲から解放されるべきである。",
+				en: "Seek no luxury in your home. Lavish dwellings and ornaments bind the mind to material things. A simple life brings spiritual freedom and allows focus on what truly matters. Be satisfied with the bare minimum and free yourself from excessive desire for possession.",
+				zh: "在家中不追求奢侈。豪华的住所和装饰品会将心智束缚于物质。简朴的生活带来精神自由，让人能够专注于真正重要的事。满足于最基本的需求，从过度的占有欲中解脱。",
+				ru: "Не ищи роскоши в своем доме. Роскошные жилища и украшения привязывают ум к материальному. Простая жизнь приносит духовную свободу и позволяет сосредоточиться на том, что действительно важно. Довольствуйся минимумом и освободи себя от чрезмерного желания обладать.",
+			},
+		},
+		{
+			jp: "一　<ruby>身<rt>み</rt></ruby>ひとつに<ruby>美食<rt>びしょく</rt></ruby>をこのまず",
+			en: "I will have no delicacies for myself.",
+			zh: "我不会为自己享用美食。",
+			ru: "Я не буду есть изысканные блюда.",
+			explanation: {
+				jp: "自分のために美食を好まない。食は生命を維持するためのものであり、快楽の対象ではない。味覚の贅沢に溺れることは、身体と精神の鍛錬を損なう。簡素な食事で満足し、食への執着を断つことで、より高い目標に心を向けることができる。",
+				en: "Do not favor delicacies for yourself. Food is for sustaining life, not an object of pleasure. Drowning in culinary luxury undermines physical and spiritual discipline. By being satisfied with simple meals and severing attachment to food, you can direct your mind toward higher goals.",
+				zh: "不要为自己喜爱美食。食物是维持生命的，而非享乐的对象。沉溺于饮食奢侈会损害身心的修炼。满足于简单的饮食，断绝对食物的执着，从而将心思转向更高的目标。",
+				ru: "Не люби изысканных блюд для себя. Еда предназначена для поддержания жизни, а не для удовольствия. Погружение в кулинарную роскошь подрывает физическую и духовную дисциплину. Довольствуясь простой пищей и разрывая привязанность к еде, ты можешь направить ум к высшим целям.",
+			},
+		},
+		{
+			jp: "一　<ruby>末々代物<rt>すえずえしろもの</rt></ruby>なる<ruby>古<rt>ふる</rt></ruby>き<ruby>道具<rt>どうぐ</rt></ruby>所持せず",
+			en: "I will not own anything that will one day be a valuable antique.",
+			zh: "我不会拥有将来会成为珍贵古董的物品。",
+			ru: "Я не буду владеть вещами, которые однажды станут ценными антиквариатом.",
+			explanation: {
+				jp: "将来価値ある骨董品となるような古い道具を所持しない。物品の収集や保存は、物質への執着を生む。真の価値は物ではなく、精神と技術にある。所有欲を捨て、物に縛られない自由な心を保つべきである。",
+				en: "Do not possess old tools that will become valuable antiques. Collecting and preserving items breeds attachment to material things. True value lies not in objects but in spirit and skill. Abandon desire for possession and maintain a free mind unbounded by things.",
+				zh: "不要拥有将来会成为珍贵古董的旧物。收集和保存物品会滋生对物质的执着。真正的价值不在于物品，而在于精神和技艺。抛弃占有欲，保持不受物品束缚的自由之心。",
+				ru: "Не владей старыми вещами, которые станут ценными антиквариатом. Коллекционирование и сохранение предметов порождает привязанность к материальному. Истинная ценность заключается не в вещах, а в духе и мастерстве. Откажись от желания обладать и сохраняй свободный ум, не связанный вещами.",
+			},
+		},
+		{
+			jp: "一　わが<ruby>身<rt>み</rt></ruby>にいたり<ruby>物忌<rt>ものいみ</rt></ruby>することなし",
+			en: "I will have trust in myself and never be superstitious.",
+			zh: "我相信自己，绝不迷信。",
+			ru: "Я буду доверять себе и никогда не буду суеверным.",
+			explanation: {
+				jp: "自分自身を信じ、迷信に囚われない。吉凶や縁起を気にすることは、判断を曇らせ、行動を制限する。真の力は自己の鍛錬と実力にあり、外的な兆候や迷信に頼るべきではない。理性と経験に基づいて決断し、行動すべきである。",
+				en: "Trust yourself and do not be trapped by superstition. Worrying about fortune and omens clouds judgment and restricts action. True power lies in self-discipline and ability, not in relying on external signs or superstitions. Make decisions and act based on reason and experience.",
+				zh: "相信自己，不要被迷信所困。担心吉凶和预兆会蒙蔽判断，限制行动。真正的力量在于自律和能力，而非依赖外在的征兆或迷信。应基于理性和经验做出决定并采取行动。",
+				ru: "Доверяй себе и не попадай в ловушку суеверий. Беспокойство о судьбе и предзнаменованиях затуманивает суждение и ограничивает действия. Истинная сила заключается в самодисциплине и способностях, а не в опоре на внешние знаки или суеверия. Принимай решения и действуй на основе разума и опыта.",
+			},
+		},
+		{
+			jp: "一　<ruby>兵具<rt>へいぐ</rt></ruby>は各別よの<ruby>道具<rt>どうぐ</rt></ruby>たしなまず",
+			en: "Weapons are of the highest importance to me, I will not concern myself with other things.",
+			zh: "兵器对我至关重要，我不会关注其他事物。",
+			ru: "Оружие для меня важнее всего, я не буду заботиться о других вещах.",
+			explanation: {
+				jp: "武具は特別なものとして扱い、他の道具には執着しない。武士にとって武器は命を守る道具であり、最も重要である。他の物品に心を奪われることなく、武具の手入れと習熟に専念すべきである。これは本質への集中を意味する。",
+				en: "Treat weapons as special and do not be attached to other tools. For the warrior, weapons are instruments that protect life and are of utmost importance. Without being distracted by other items, devote yourself to maintaining and mastering weapons. This means focusing on the essential.",
+				zh: "将兵器视为特殊之物，不要执着于其他工具。对武士而言，武器是保护生命的工具，是最重要的。不要被其他物品分心，应专注于武器的保养和精通。这意味着专注于本质。",
+				ru: "Относись к оружию как к особенному и не привязывайся к другим инструментам. Для воина оружие — это инструменты, защищающие жизнь, и они имеют первостепенное значение. Не отвлекаясь на другие предметы, посвяти себя уходу за оружием и овладению им. Это означает сосредоточение на существенном.",
+			},
+		},
+		{
+			jp: "一　<ruby>道<rt>みち</rt></ruby>においては<ruby>死<rt>し</rt></ruby>をいとはず思う",
+			en: "I will always be prepared to die on this way.",
+			zh: "我在道上时刻准备赴死。",
+			ru: "Я всегда буду готов умереть на этом пути.",
+			explanation: {
+				jp: "武士の道において、死を厭わない覚悟を持つ。死への恐怖を克服することで、真の自由と勇気が得られる。生死に執着せず、今この瞬間に全力を尽くす。死を受け入れる覚悟があってこそ、真に生きることができる。",
+				en: "On the warrior's way, maintain resolve to not fear death. By overcoming fear of death, you gain true freedom and courage. Without attachment to life and death, devote full effort to this present moment. Only with readiness to accept death can you truly live.",
+				zh: "在武士之道上，保持不惧死亡的决心。通过克服对死亡的恐惧，获得真正的自由和勇气。不执着于生死，全力投入当下这一刻。只有准备好接受死亡，才能真正地活着。",
+				ru: "На пути воина сохраняй решимость не бояться смерти. Преодолевая страх смерти, ты обретаешь истинную свободу и мужество. Без привязанности к жизни и смерти посвящай все усилия настоящему моменту. Только с готовностью принять смерть ты можешь по-настоящему жить.",
+			},
+		},
+		{
+			jp: "一　<ruby>老身<rt>ろうしん</rt></ruby>に<ruby>財宝<rt>ざいほう</rt></ruby><ruby>所領<rt>しょりょう</rt></ruby>もちゆる<ruby>心<rt>こころ</rt></ruby>なし",
+			en: "I will take advantage of no treasure or manor in my old age.",
+			zh: "我在老年不会贪图财宝或领地。",
+			ru: "В старости я не буду пользоваться сокровищами или поместьями.",
+			explanation: {
+				jp: "老年になっても財宝や所領を利用しようとする心を持たない。晩年に物質的な富や権力を追求することは、生涯の修行を無にする。最後まで質素に生き、執着から自由であり続けるべきである。真の豊かさは物質ではなく精神にある。",
+				en: "Even in old age, harbor no desire to exploit treasures or estates. Pursuing material wealth and power in later years negates a lifetime of discipline. Live simply until the end and remain free from attachment. True wealth lies not in material things but in spirit.",
+				zh: "即使在老年，也不怀有利用财宝或领地的欲望。在晚年追求物质财富和权力会否定一生的修行。直到生命终点都要简朴生活，保持摆脱执着的自由。真正的富足不在物质，而在精神。",
+				ru: "Даже в старости не питай желания использовать сокровища или поместья. Стремление к материальному богатству и власти в поздние годы сводит на нет дисциплину всей жизни. Живи просто до конца и оставайся свободным от привязанностей. Истинное богатство не в материальном, а в духе.",
+			},
+		},
+		{
+			jp: "一　<ruby>仏神<rt>ぶっしん</rt></ruby>は貴し<ruby>仏神<rt>ぶっしん</rt></ruby>をたのまず",
+			en: "Buddhas and Gods are worthy of adoration but I will ask them for nothing.",
+			zh: "佛神值得崇敬，但我不会向他们祈求。",
+			ru: "Будды и боги достойны почитания, но я не буду просить их ни о чем.",
+			explanation: {
+				jp: "仏や神は尊いが、それらに頼らない。信仰は持つが、自己の運命を神仏に委ねることはしない。真の力は自分自身の努力と修行から生まれる。神仏を敬いつつも、自己の責任において生きるべきである。",
+				en: "Buddhas and gods are noble, but do not rely on them. Have faith, but do not entrust your destiny to divine beings. True power arises from your own effort and discipline. While respecting deities, live by your own responsibility.",
+				zh: "佛与神是尊贵的，但不要依赖他们。可以有信仰，但不要将自己的命运托付给神佛。真正的力量源于自己的努力和修行。在敬重神佛的同时，应以自己的责任生活。",
+				ru: "Будды и боги благородны, но не полагайся на них. Имей веру, но не вверяй свою судьбу божественным существам. Истинная сила возникает из твоих собственных усилий и дисциплины. Уважая божества, живи под собственную ответственность.",
+			},
+		},
+		{
+			jp: "一　<ruby>身<rt>み</rt></ruby>を捨ても<ruby>名利<rt>みょうり</rt></ruby>はすてず",
+			en: "Even if I sacrifice my life I will never sacrifice my name.",
+			zh: "即使牺牲生命，我也绝不会牺牲名誉。",
+			ru: "Даже если я пожертвую жизнью, я никогда не пожертвую своим именем.",
+			explanation: {
+				jp: "命を捨てることがあっても、名誉は決して捨てない。武士にとって名誉は命よりも重い。不名誉に生きるよりも、名誉を守って死ぬことを選ぶ。これは虚栄ではなく、自己の信念と誠実さを貫くことを意味する。",
+				en: "Even if you sacrifice your life, never abandon honor. For the warrior, honor weighs more than life. Choose to die preserving honor rather than live in disgrace. This is not vanity, but means adhering to your convictions and integrity.",
+				zh: "即使牺牲生命，也绝不放弃荣誉。对武士而言，荣誉重于生命。宁可守护荣誉而死，也不苟且偷生于耻辱之中。这不是虚荣，而是坚持自己的信念和诚实。",
+				ru: "Даже если ты жертвуешь жизнью, никогда не отказывайся от чести. Для воина честь весит больше, чем жизнь. Выбирай смерть с сохранением чести, а не жизнь в позоре. Это не тщеславие, а приверженность своим убеждениям и целостности.",
+			},
+		},
+		{
+			jp: "一　つねに<ruby>兵法<rt>へいほう</rt></ruby>の<ruby>道<rt>みち</rt></ruby>をはなれず",
+			en: "I will never deviate from the way of Heihô.",
+			zh: "我永远不会偏离兵法之道。",
+			ru: "Я никогда не отклонюсь от пути Хэйхо.",
+			explanation: {
+				jp: "常に兵法の道から離れない。武士の道は日常生活のすべてに浸透すべきである。訓練の時だけでなく、あらゆる瞬間において兵法の精神を保ち、修行を続ける。これが生涯を通じた武士の在り方である。",
+				en: "Never depart from the way of strategy. The warrior's way should permeate all aspects of daily life. Maintain the spirit of martial arts not only during training but in every moment, and continue discipline. This is the warrior's way of being throughout life.",
+				zh: "永远不要离开兵法之道。武士之道应渗透到日常生活的方方面面。不仅在训练时，而且在每一刻都保持兵法精神，持续修行。这是武士终生的存在方式。",
+				ru: "Никогда не отходи от пути стратегии. Путь воина должен пронизывать все аспекты повседневной жизни. Сохраняй дух боевых искусств не только во время тренировок, но и в каждый момент, и продолжай дисциплину. Это способ бытия воина на протяжении всей жизни.",
+			},
+		},
+	],
+	comment:
+		'Докодо (獨行道, "Путь одиночки") — это произведение, написанное Миямото Мусаси за неделю до своей смерти в 1645 году. Оно состоит из 21 наставления о том, как жить правильной жизнью и следовать по пути воина.',
+}
+
+const signature = [
+	{
+		jp: "正保弐年",
+		en: "Second year of Shôhô (1645)",
+		zh: "正保弐年",
+		ru: "2-й год Сёхо (1645)",
+	},
+	{
+		jp: "五月十二日 新免武蔵",
+		en: "12th day of the 5th month, Shinmen Musashi",
+		zh: "五月十二日 新免武蔵",
+		ru: "12-й день 5-го месяца, Синмэн Мусаси",
+	},
+	{
+		jp: "玄信（花押）",
+		en: "Harunobu (monogram)",
+		zh: "玄信（花押）",
+		ru: "Харунобу (монограмма)",
+	},
+	{
+		jp: "寺尾孫之丞殿",
+		en: "To Terao Magonojô",
+		zh: "寺尾孫之丞殿",
+		ru: "Тэрао Магонодзё",
+	},
+]
+
+export function Notebook() {
+	return (
+		<div className="mx-auto my-8 max-w-4xl rounded-lg bg-white p-6 shadow-xl">
+			<header className="mb-10 border-b pb-6 text-center">
+				<h1 className="mb-2 text-4xl font-bold text-gray-900">
+					{renderJapaneseText(data.title.oldJapanese)}（{renderJapaneseText(data.title.modernJapanese)}）
+				</h1>
+				<h2 className="text-lg text-gray-600">
+					{data.title.en} / {data.title.zh} / {data.title.ru}
+				</h2>
+				<p className="mt-3 text-gray-700">
+					{renderJapaneseText(data.author.jp)} — {data.author.en} / {data.author.zh} / {data.author.ru} (
+					{data.author.year})
+				</p>
+			</header>
+
+			{/* verses */}
+			<ol className="list-none space-y-8">
+				{data.verses.map((verse, index) => (
+					<li key={index} className="border-l-4 border-gray-200 py-2 pl-4">
+						{locales.map((lang, i) => (
+							<div key={lang}>
+								<p className={cn("mb-1", lang === "jp" && "text-lg")}>
+									{lang === "jp" ? renderJapaneseText(verse[lang]) : verse[lang]}
+								</p>
+								{verse.explanation[lang] && (
+									<div className={cn("text-sm text-gray-600 italic", i !== locales.length - 1 && "mb-3")}>
+										{verse.explanation[lang]}
+									</div>
+								)}
+							</div>
+						))}
+					</li>
+				))}
+			</ol>
+
+			{/* signature */}
+			<div className="mt-12 space-y-8 border-t border-gray-200 pt-8 pl-5">
+				{signature.map((line, i) => (
+					<div key={i}>
+						{locales.map((locale, j) => (
+							<div key={j}>
+								<span className="text-lg leading-0">{i === 0 ? "" : i === 1 ? "　　" : "　　　　　　　　　　　"}</span>
+								<span className={locale === "jp" ? "text-lg" : "text-sm text-gray-600"}>{line[locale]}</span>
+							</div>
+						))}
+					</div>
+				))}
+			</div>
+
+			{/* Comment */}
+			<div className="mt-8 border-t border-gray-200 pt-4">
+				<p className="text-sm text-gray-600">{data.comment}</p>
+			</div>
+		</div>
+	)
+}

@@ -1,7 +1,9 @@
+import { Notebook } from "@/components/notebook"
+
 export default function Home() {
 	return (
-		<main>
-			<div>Hello world!</div>
+		<main className="min-h-screen bg-gray-50 py-8">
+			<Notebook />
 		</main>
 	)
 }
