@@ -17,7 +17,7 @@ export function Notebook() {
 					{data.author.year})
 				</p>
 
-				<ul className="mt-10 space-y-4">
+				<ul className="mt-10 space-y-4 text-sm text-gray-600">
 					{Object.entries(data.description).map(([lang, desc], i) => (
 						<li key={i}>{lang === "jp" ? <JapaneseText text={desc} /> : desc}</li>
 					))}
