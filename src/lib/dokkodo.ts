@@ -2,7 +2,7 @@ export const locales = ["jp", "en", "zh", "ru"] as const
 
 export const data = {
 	title: {
-		oldJapanese: "独行道",
+		oldJapanese: "獨行道",
 		modernJapanese: "独行道",
 		en: "The Way of Walking Alone",
 		zh: "独行道",
@@ -14,6 +14,12 @@ export const data = {
 		zh: "宫本武藏",
 		ru: "Миямото Мусаси",
 		year: 1645,
+	},
+	description: {
+		jp: "<ruby>独行道<rt>どっこうどう</rt></ruby>は、<ruby>剣豪<rt>けんごう</rt></ruby>・<ruby>宮本<rt>みやもと</rt></ruby><ruby>武蔵<rt>むさし</rt></ruby>が<ruby>亡<rt>な</rt></ruby>くなる<ruby>直前<rt>ちょくぜん</rt></ruby>に<ruby>書<rt>か</rt></ruby>き<ruby>残<rt>のこ</rt></ruby>した21の<ruby>人生<rt>じんせい</rt></ruby>の<ruby>教<rt>おし</rt></ruby>えです。<ruby>物事<rt>ものごと</rt></ruby>への<ruby>執着<rt>しゅうちゃく</rt></ruby>を<ruby>手放<rt>てばな</rt></ruby>し、<ruby>自立<rt>じりつ</rt></ruby>した<ruby>精神<rt>せいしん</rt></ruby>で<ruby>生<rt>い</rt></ruby>きることの<ruby>大切<rt>たいせつ</rt></ruby>さを<ruby>説<rt>と</rt></ruby>いており、<ruby>武士<rt>ぶし</rt></ruby>の<ruby>心構<rt>こころがま</rt></ruby>えと<ruby>人生<rt>じんせい</rt></ruby><ruby>哲学<rt>てつがく</rt></ruby>がシンプルに<ruby>表現<rt>ひょうげん</rt></ruby>されています。",
+		en: "The Dokkodo (The Way of Walking Alone) is a collection of 21 precepts written by legendary swordsman Miyamoto Musashi shortly before his death. It teaches the importance of non-attachment and living with an independent spirit, distilling the warrior's mindset and life philosophy into concise principles.",
+		zh: "《独行道》是传奇剑客宫本武藏临终前所写的21条人生训诫。它教导人们摒弃执着、以独立精神生活的重要性,将武士的心态和人生哲学浓缩为简明的原则。",
+		ru: "Доккодо (Путь одиночки) — это собрание 21 наставления, написанных легендарным мечником Миямото Мусаси незадолго до смерти. Оно учит важности непривязанности и жизни с независимым духом, воплощая мировоззрение воина и жизненную философию в лаконичных принципах.",
 	},
 	verses: [
 		{
