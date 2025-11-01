@@ -18,9 +18,9 @@ export const data = {
 	verses: [
 		{
 			jp: "一　<ruby>世々<rt>よよ</rt></ruby>の<ruby>道<rt>みち</rt></ruby>をそむく<ruby>事<rt>こと</rt></ruby>なし",
-			en: "I will not oppose the ways of the world.",
-			zh: "我不会违背世间之道。",
-			ru: "Я не буду противиться миру.",
+			en: "I will not oppose the ways of the world",
+			zh: "我不会违背世间之道",
+			ru: "Я не буду противиться миру",
 			explanation: {
 				jp: "世々を通じて存在する自然の秩序と普遍的な原理に自分を合わせよ。現実の根本的な真理に逆らったり、背を向けたりしてはならない。時空を包含する道を受け入れることで、エゴや無知によって対立するのではなく、世界と調和を保つことができる。",
 				en: "Align yourself with the natural order and universal principles that have existed across all generations. Do not resist or turn away from the fundamental truths of reality. By accepting the Way that encompasses all time and space, you remain in harmony with the world rather than opposing it through ego or ignorance.",
@@ -30,9 +30,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>身<rt>み</rt></ruby>にたのしみをたくまず",
-			en: "I will not seek pleasurable activities.",
-			zh: "我不会追求享乐。",
-			ru: "Я не буду искать удовольствий.",
+			en: "I will not seek pleasurable activities",
+			zh: "我不会追求享乐",
+			ru: "Я не буду искать удовольствий",
 			explanation: {
 				jp: "肉体的な快楽や一時的な娯楽を追い求めることは、武士の道から心を逸らせる。真の満足は自己修練と目的への献身から生まれる。欲望に溺れず、より高い目標に集中することで、精神的な強さと明晰さを保つことができる。",
 				en: "Do not pursue bodily pleasures or fleeting entertainment that distract from the warrior's path. True fulfillment comes from self-discipline and dedication to purpose. By avoiding indulgence in desires and focusing on higher goals, you maintain spiritual strength and mental clarity necessary for mastery.",
@@ -42,9 +42,9 @@ export const data = {
 		},
 		{
 			jp: "一　よろずに<ruby>依恃<rt>えこ</rt></ruby>の<ruby>心<rt>こころ</rt></ruby>なし",
-			en: "I will give preference to nothing among all things.",
-			zh: "我对万事万物不存偏私之心。",
-			ru: "Я не буду ничему отдавать предпочтение.",
+			en: "I will give preference to nothing among all things",
+			zh: "我对万事万物不存偏私之心",
+			ru: "Я не буду ничему отдавать предпочтение",
 			explanation: {
 				jp: "特定の物事や人に対する偏愛や執着を持たない。依怙贔屓は判断を曇らせ、公正さを失わせる。すべてを平等に見ることで、真実をありのままに認識し、状況に応じて適切な行動を取ることができる。偏見なき心こそが、武士の公平な判断力の源である。",
 				en: "Do not harbor favoritism or attachment to particular things or people. Bias clouds judgment and compromises fairness. By viewing all things equally, you perceive truth as it is and act appropriately according to circumstances. An impartial mind is the foundation of the warrior's sound judgment and just decisions.",
@@ -54,9 +54,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>身<rt>み</rt></ruby>をあさく<ruby>思<rt>おもい</rt></ruby><ruby>世<rt>よ</rt></ruby>をふかく<ruby>思ふ<rt>おもう</rt></ruby>",
-			en: "I consider myself unimportant, but the world so great and deep.",
-			zh: "我视己身为轻，而视世界为深重。",
-			ru: "Я считаю себя незначительным, но мир — великим и глубоким.",
+			en: "I consider myself unimportant, but the world so great and deep",
+			zh: "我视己身为轻，而视世界为深重",
+			ru: "Я считаю себя незначительным, но мир — великим и глубоким",
 			explanation: {
 				jp: "自分個人の利益や名声を軽んじ、世界の深遠さと複雑さを重んじる。自己中心的な考えから離れ、より大きな視野を持つことで、真の知恵と謙虚さが生まれる。自分を小さく見ることは卑下ではなく、宇宙の広大さと人生の奥深さを認識することである。",
 				en: "Value your personal interests and fame lightly, while honoring the profundity and complexity of the world. By moving away from self-centered thinking and embracing a broader perspective, you cultivate true wisdom and humility. Viewing yourself as small is not self-deprecation, but recognition of the vastness of the universe and the depth of existence.",
@@ -66,9 +66,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>一生<rt>いっしょう</rt></ruby>の<ruby>間<rt>あいだ</rt></ruby>よくしん<ruby>思<rt>おも</rt></ruby>わず",
-			en: "I will be free of desire throughout my entire life.",
-			zh: "我终生不起贪欲之心。",
-			ru: "Я буду свободен от желаний всю свою жизнь.",
+			en: "I will be free of desire throughout my entire life",
+			zh: "我终生不起贪欲之心",
+			ru: "Я буду свободен от желаний всю свою жизнь",
 			explanation: {
 				jp: "生涯を通じて貪欲や執着心を抱かない。物質的な欲望や名誉への渇望は心を乱し、本質から目を逸らせる。欲心を捨てることで、心は自由になり、真の目的に集中できる。これは禁欲ではなく、不必要な執着から解放され、清らかな心で生きることである。",
 				en: "Throughout your life, harbor no greed or attachment. Material desires and cravings for honor disturb the mind and divert attention from what is essential. By abandoning covetousness, the mind becomes free and can focus on true purpose. This is not asceticism, but liberation from unnecessary attachments, living with a pure heart.",
@@ -78,9 +78,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>我事<rt>わがこと</rt></ruby>にお<ruby>ゐ<rt>い</rt></ruby>て<ruby>後悔<rt>こうかい</rt></ruby>をせず",
-			en: "I will not regret my deeds.",
-			zh: "我对自己的行为不感后悔。",
-			ru: "Я не буду сожалеть о своих поступках.",
+			en: "I will not regret my deeds",
+			zh: "我对自己的行为不感后悔",
+			ru: "Я не буду сожалеть о своих поступках",
 			explanation: {
 				jp: "自分の行動に対して後悔しない。決断を下す時は慎重に考え、行動したら振り返らない。後悔は過去に囚われ、前進を妨げる。過ちから学ぶことは重要だが、悔やむことに時間を費やすべきではない。全力を尽くして行動したなら、その結果を受け入れ、次へ進むべきである。",
 				en: "Do not regret your actions. When making decisions, think carefully; once you act, do not look back. Regret traps you in the past and hinders progress. Learning from mistakes is important, but dwelling in remorse wastes time. If you acted with full commitment, accept the outcome and move forward.",
@@ -90,9 +90,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>善悪<rt>ぜんあく</rt></ruby>に<ruby>他<rt>た</rt></ruby>をねたむ<ruby>心<rt>こころ</rt></ruby>なし",
-			en: "I will not be envious of anybody, good or bad.",
-			zh: "我对任何人都不心怀嫉妒，无论善恶。",
-			ru: "Я не буду завидовать никому, ни хорошему, ни плохому.",
+			en: "I will not be envious of anybody, good or bad",
+			zh: "我对任何人都不心怀嫉妒，无论善恶",
+			ru: "Я не буду завидовать никому, ни хорошему, ни плохому",
 			explanation: {
 				jp: "他人の成功や失敗に対して嫉妬心を抱かない。善人の美徳を羨まず、悪人の悪行にも嫉妬しない。嫉妬は心を蝕み、自己の成長を妨げる。他者と自分を比較するのではなく、自らの道を歩み、自己の向上に専念すべきである。他者の状況は自分の価値を決めるものではない。",
 				en: "Do not harbor envy toward others' success or failure. Do not covet the virtues of the good, nor be jealous of the misdeeds of the bad. Envy corrodes the heart and obstructs personal growth. Rather than comparing yourself to others, walk your own path and devote yourself to self-improvement. Others' circumstances do not determine your worth.",
@@ -102,9 +102,9 @@ export const data = {
 		},
 		{
 			jp: "一　いづれの<ruby>道<rt>みち</rt></ruby>にもわかれをかなしまず",
-			en: "I will not be sad when I must take my leave of any way.",
-			zh: "我不会为离开任何道路而悲伤。",
-			ru: "Я не буду печалиться, покидая любой путь.",
+			en: "I will not be sad when I must take my leave of any way",
+			zh: "我不会为离开任何道路而悲伤",
+			ru: "Я не буду печалиться, покидая любой путь",
 			explanation: {
 				jp: "どのような道や関係から離れる時も、悲しみに囚われない。別れは自然な流れであり、執着は前進を妨げる。感謝と共に過去を手放し、新たな道へ進む心構えを持つ。変化を恐れず、すべての経験を成長の糧とする。",
 				en: "Do not be trapped in sorrow when leaving any path or relationship. Parting is a natural flow, and attachment hinders progress. Release the past with gratitude and maintain readiness to advance on a new path. Do not fear change, and treat all experiences as nourishment for growth.",
@@ -114,9 +114,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>自他<rt>じた</rt></ruby><ruby>共<rt>とも</rt></ruby>にうらみかこつ<ruby>心<rt>こころ</rt></ruby>なし",
-			en: "I will not seek excuses and will hold no grudge against myself or others.",
-			zh: "我不会寻找借口，也不会对自己或他人怀恨在心。",
-			ru: "Я не буду искать оправданий и не буду держать обиду на себя или других.",
+			en: "I will not seek excuses and will hold no grudge against myself or others",
+			zh: "我不会寻找借口，也不会对自己或他人怀恨在心",
+			ru: "Я не буду искать оправданий и не буду держать обиду на себя или других",
 			explanation: {
 				jp: "自分や他人を恨まず、言い訳を求めない。失敗の責任を他者に転嫁せず、自らの行動を省みる。同時に、過度な自責も避ける。恨みや不満は心を曇らせ、建設的な行動を妨げる。責任を受け入れ、改善に集中すべきである。",
 				en: "Hold no resentment toward yourself or others, and seek no excuses. Do not shift blame for failure onto others; reflect on your own actions. At the same time, avoid excessive self-blame. Grudges and complaints cloud the mind and obstruct constructive action. Accept responsibility and focus on improvement.",
@@ -126,9 +126,9 @@ export const data = {
 		},
 		{
 			jp: "一　れんぼの<ruby>道<rt>みち</rt></ruby><ruby>思ひ<rt>おもい</rt>よる<ruby>こゝろ<rt>こころ</rt></ruby>なし",
-			en: "I will not indulge in the way of passionate love.",
-			zh: "我不会沉溺于情爱之道。",
-			ru: "Я не буду предаваться пути страстной любви.",
+			en: "I will not indulge in the way of passionate love",
+			zh: "我不会沉溺于情爱之道",
+			ru: "Я не буду предаваться пути страстной любви",
 			explanation: {
 				jp: "情熱的な恋愛に溺れない。激しい情念は判断を狂わせ、武士の道から心を逸らせる。これは愛情を否定するのではなく、感情に支配されることなく、冷静さと目的への献身を保つことを意味する。感情と理性のバランスを保つべきである。",
 				en: "Do not drown in passionate romance. Intense passion distorts judgment and diverts the heart from the warrior's way. This does not deny affection, but means maintaining composure and dedication to purpose without being controlled by emotions. Balance emotion and reason.",
@@ -138,9 +138,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>物毎<rt>ものごと</rt></ruby>にすきこのむ<ruby>事<rt>こと</rt></ruby>なし",
-			en: "I will not seek elegance and beauty in all things.",
-			zh: "我不会在万物中追求优雅与美。",
-			ru: "Я не буду искать изящество и красоту во всем.",
+			en: "I will not seek elegance and beauty in all things",
+			zh: "我不会在万物中追求优雅与美",
+			ru: "Я не буду искать изящество и красоту во всем",
 			explanation: {
 				jp: "あらゆる物事において風流や美を追求しない。審美的な嗜好に時間と心を奪われることは、本質から目を逸らせる。実用性と目的を優先し、表面的な美しさに惑わされない。ただし、これは美を否定するのではなく、それに執着しないことを意味する。",
 				en: "Do not pursue refinement and beauty in all things. Having time and mind consumed by aesthetic preferences diverts attention from the essential. Prioritize practicality and purpose, and do not be deceived by superficial beauty. However, this does not deny beauty, but means not being attached to it.",
@@ -150,9 +150,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>私宅<rt>したく</rt></ruby>にお<ruby>ゐ<rt>い</rt></ruby>てのぞむ<ruby>心<rt>こころ</rt></ruby>なし",
-			en: "I will have no luxury in my house.",
-			zh: "我在家中不追求奢华。",
-			ru: "В моем доме не будет роскоши.",
+			en: "I will have no luxury in my house",
+			zh: "我在家中不追求奢华",
+			ru: "В моем доме не будет роскоши",
 			explanation: {
 				jp: "自宅において贅沢を求めない。豪華な住居や装飾品は心を物質に縛り付ける。質素な生活は精神の自由をもたらし、真に重要なことに集中できる。必要最小限で満足し、過剰な所有欲から解放されるべきである。",
 				en: "Seek no luxury in your home. Lavish dwellings and ornaments bind the mind to material things. A simple life brings spiritual freedom and allows focus on what truly matters. Be satisfied with the bare minimum and free yourself from excessive desire for possession.",
@@ -162,9 +162,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>身<rt>み</rt></ruby>ひとつに<ruby>美食<rt>びしょく</rt></ruby>をこのまず",
-			en: "I will have no delicacies for myself.",
-			zh: "我不会为自己享用美食。",
-			ru: "Я не буду есть изысканные блюда.",
+			en: "I will have no delicacies for myself",
+			zh: "我不会为自己享用美食",
+			ru: "Я не буду есть изысканные блюда",
 			explanation: {
 				jp: "自分のために美食を好まない。食は生命を維持するためのものであり、快楽の対象ではない。味覚の贅沢に溺れることは、身体と精神の鍛錬を損なう。簡素な食事で満足し、食への執着を断つことで、より高い目標に心を向けることができる。",
 				en: "Do not favor delicacies for yourself. Food is for sustaining life, not an object of pleasure. Drowning in culinary luxury undermines physical and spiritual discipline. By being satisfied with simple meals and severing attachment to food, you can direct your mind toward higher goals.",
@@ -174,9 +174,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>末々<rt>すえずえ</rt></ruby><ruby>代物<rt>しろもの</rt></ruby>なる<ruby>古<rt>ふる</rt></ruby>き<ruby>道具<rt>どうぐ</rt></ruby><ruby>所持<rt>しょじ</rt></ruby>せず",
-			en: "I will not own anything that will one day be a valuable antique.",
-			zh: "我不会拥有将来会成为珍贵古董的物品。",
-			ru: "Я не буду владеть вещами, которые однажды станут ценными антиквариатом.",
+			en: "I will not own anything that will one day be a valuable antique",
+			zh: "我不会拥有将来会成为珍贵古董的物品",
+			ru: "Я не буду владеть вещами, которые однажды станут ценными антиквариатом",
 			explanation: {
 				jp: "将来価値ある骨董品となるような古い道具を所持しない。物品の収集や保存は、物質への執着を生む。真の価値は物ではなく、精神と技術にある。所有欲を捨て、物に縛られない自由な心を保つべきである。",
 				en: "Do not possess old tools that will become valuable antiques. Collecting and preserving items breeds attachment to material things. True value lies not in objects but in spirit and skill. Abandon desire for possession and maintain a free mind unbounded by things.",
@@ -186,9 +186,9 @@ export const data = {
 		},
 		{
 			jp: "一　わが<ruby>身<rt>み</rt></ruby>にいたり<ruby>物<rt>もの</rt></ruby>いみする<ruby>事<rt>こと</rt></ruby>なし",
-			en: "I will have trust in myself and never be superstitious.",
-			zh: "我相信自己，绝不迷信。",
-			ru: "Я буду доверять себе и никогда не буду суеверным.",
+			en: "I will have trust in myself and never be superstitious",
+			zh: "我相信自己，绝不迷信",
+			ru: "Я буду доверять себе и никогда не буду суеверным",
 			explanation: {
 				jp: "自分自身を信じ、迷信に囚われない。吉凶や縁起を気にすることは、判断を曇らせ、行動を制限する。真の力は自己の鍛錬と実力にあり、外的な兆候や迷信に頼るべきではない。理性と経験に基づいて決断し、行動すべきである。",
 				en: "Trust yourself and do not be trapped by superstition. Worrying about fortune and omens clouds judgment and restricts action. True power lies in self-discipline and ability, not in relying on external signs or superstitions. Make decisions and act based on reason and experience.",
@@ -198,9 +198,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>兵具<rt>へいぐ</rt></ruby>は<ruby>各別<rt>かくべつ</rt></ruby>よの<ruby>道具<rt>どうぐ</rt></ruby>たしなまず",
-			en: "Weapons are of the highest importance to me, I will not concern myself with other things.",
-			zh: "兵器对我至关重要，我不会关注其他事物。",
-			ru: "Оружие для меня важнее всего, я не буду заботиться о других вещах.",
+			en: "Weapons are of the highest importance to me, I will not concern myself with other things",
+			zh: "兵器对我至关重要，我不会关注其他事物",
+			ru: "Оружие для меня важнее всего, я не буду заботиться о других вещах",
 			explanation: {
 				jp: "武具は特別なものとして扱い、他の道具には執着しない。武士にとって武器は命を守る道具であり、最も重要である。他の物品に心を奪われることなく、武具の手入れと習熟に専念すべきである。これは本質への集中を意味する。",
 				en: "Treat weapons as special and do not be attached to other tools. For the warrior, weapons are instruments that protect life and are of utmost importance. Without being distracted by other items, devote yourself to maintaining and mastering weapons. This means focusing on the essential.",
@@ -210,9 +210,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>道<rt>みち</rt></ruby>にお<ruby>ゐ<rt>い</rt></ruby>ては<ruby>死<rt>し</rt></ruby>をいとはず<ruby>思ふ<rt>おもう</rt></ruby>",
-			en: "I will always be prepared to die on this way.",
-			zh: "我在道上时刻准备赴死。",
-			ru: "Я всегда буду готов умереть на этом пути.",
+			en: "I will always be prepared to die on this way",
+			zh: "我在道上时刻准备赴死",
+			ru: "Я всегда буду готов умереть на этом пути",
 			explanation: {
 				jp: "武士の道において、死を厭わない覚悟を持つ。死への恐怖を克服することで、真の自由と勇気が得られる。生死に執着せず、今この瞬間に全力を尽くす。死を受け入れる覚悟があってこそ、真に生きることができる。",
 				en: "On the warrior's way, maintain resolve to not fear death. By overcoming fear of death, you gain true freedom and courage. Without attachment to life and death, devote full effort to this present moment. Only with readiness to accept death can you truly live.",
@@ -222,9 +222,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>老身<rt>ろうしん</rt></ruby>に<ruby>財宝<rt>ざいほう</rt></ruby><ruby>所領<rt>しょりょう</rt></ruby>もちゆる<ruby>心<rt>こころ</rt></ruby>なし",
-			en: "I will take advantage of no treasure or manor in my old age.",
-			zh: "我在老年不会贪图财宝或领地。",
-			ru: "В старости я не буду пользоваться сокровищами или поместьями.",
+			en: "I will take advantage of no treasure or manor in my old age",
+			zh: "我在老年不会贪图财宝或领地",
+			ru: "В старости я не буду пользоваться сокровищами или поместьями",
 			explanation: {
 				jp: "老年になっても財宝や所領を利用しようとする心を持たない。晩年に物質的な富や権力を追求することは、生涯の修行を無にする。最後まで質素に生き、執着から自由であり続けるべきである。真の豊かさは物質ではなく精神にある。",
 				en: "Even in old age, harbor no desire to exploit treasures or estates. Pursuing material wealth and power in later years negates a lifetime of discipline. Live simply until the end and remain free from attachment. True wealth lies not in material things but in spirit.",
@@ -234,9 +234,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>仏神<rt>ぶっしん</rt></ruby>は<ruby>貴<rt>とうと</rt></ruby>し<ruby>仏神<rt>ぶっしん</rt></ruby>をたのまず",
-			en: "Buddhas and Gods are worthy of adoration but I will ask them for nothing.",
-			zh: "佛神值得崇敬，但我不会向他们祈求。",
-			ru: "Будды и боги достойны почитания, но я не буду просить их ни о чем.",
+			en: "Buddhas and Gods are worthy of adoration but I will ask them for nothing",
+			zh: "佛神值得崇敬，但我不会向他们祈求",
+			ru: "Будды и боги достойны почитания, но я не буду просить их ни о чем",
 			explanation: {
 				jp: "仏や神は尊いが、それらに頼らない。信仰は持つが、自己の運命を神仏に委ねることはしない。真の力は自分自身の努力と修行から生まれる。神仏を敬いつつも、自己の責任において生きるべきである。",
 				en: "Buddhas and gods are noble, but do not rely on them. Have faith, but do not entrust your destiny to divine beings. True power arises from your own effort and discipline. While respecting deities, live by your own responsibility.",
@@ -246,9 +246,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>身<rt>み</rt></ruby>を<ruby>捨<rt>すて</rt></ruby>ても<ruby>名利<rt>みょうり</rt></ruby>はすてず",
-			en: "Even if I sacrifice my life I will never sacrifice my name.",
-			zh: "即使牺牲生命，我也绝不会牺牲名誉。",
-			ru: "Даже если я пожертвую жизнью, я никогда не пожертвую своим именем.",
+			en: "Even if I sacrifice my life I will never sacrifice my name",
+			zh: "即使牺牲生命，我也绝不会牺牲名誉",
+			ru: "Даже если я пожертвую жизнью, я никогда не пожертвую своим именем",
 			explanation: {
 				jp: "命を捨てることがあっても、名誉は決して捨てない。武士にとって名誉は命よりも重い。不名誉に生きるよりも、名誉を守って死ぬことを選ぶ。これは虚栄ではなく、自己の信念と誠実さを貫くことを意味する。",
 				en: "Even if you sacrifice your life, never abandon honor. For the warrior, honor weighs more than life. Choose to die preserving honor rather than live in disgrace. This is not vanity, but means adhering to your convictions and integrity.",
@@ -258,9 +258,9 @@ export const data = {
 		},
 		{
 			jp: "一　<ruby>常<rt>つね</rt></ruby>に<ruby>兵法<rt>へいほう</rt></ruby>の<ruby>道<rt>みち</rt></ruby>をはなれず",
-			en: "I will never deviate from the way of Heihô.",
-			zh: "我永远不会偏离兵法之道。",
-			ru: "Я никогда не отклонюсь от пути Хэйхо.",
+			en: "I will never deviate from the way of Heihô",
+			zh: "我永远不会偏离兵法之道",
+			ru: "Я никогда не отклонюсь от пути Хэйхо",
 			explanation: {
 				jp: "常に兵法の道から離れない。武士の道は日常生活のすべてに浸透すべきである。訓練の時だけでなく、あらゆる瞬間において兵法の精神を保ち、修行を続ける。これが生涯を通じた武士の在り方である。",
 				en: "Never depart from the way of strategy. The warrior's way should permeate all aspects of daily life. Maintain the spirit of martial arts not only during training but in every moment, and continue discipline. This is the warrior's way of being throughout life.",
