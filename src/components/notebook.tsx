@@ -50,7 +50,9 @@ export function Notebook() {
 					<div key={i}>
 						{locales.map((locale, j) => (
 							<div key={j}>
-								<span className="text-lg leading-0">{i === 0 ? "" : i === 1 ? "　　" : "　　　　　　　　　　　"}</span>
+								<span className="text-lg leading-0 max-md:hidden">
+									{i === 0 ? "" : i === 1 ? "　　" : "　　　　　　　　　　　"}
+								</span>
 								<span className={locale === "jp" ? "text-lg" : "text-sm text-gray-600"}>
 									{locale === "jp" ? <JapaneseText text={line[locale]} /> : line[locale]}
 								</span>
